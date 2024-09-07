@@ -1,7 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .page {
   /* Add page class properties here */
-  max-width: 1600px;
   min-width: 1100px;
+  max-width: 1600px;
+
   margin: 0 auto;
   font-size: 16px;
   line-height: 20px;
@@ -21,14 +28,21 @@
 
 .nav {
   /* Add flex properties here */
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav__logo {
+  width: 57px;
+  height: 80px;
 }
 
 .nav__links {
   /* Reset default list styles here */
   margin: 8px 0 0;
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
 }
 
 .nav__link {
@@ -38,9 +52,18 @@
 }
 
 .header__title {
+  max-width: 601px;
+  font-size: 76px;
+  line-height: 66px;
+  font-weight: 500;
+  margin: 128px 0 0;
 }
 
 .header__description {
+  max-width: 532px;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 32px 0 0;
 }
 
 .header__image {
