@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-bg-color: #ffffff; /* Main background */
+  --main-font-color: #000000; /* Main font color */
+  --contrast-bg-color: #f2f2f2; /* Contrast background */
+  --footer-bg-color: #1f1f1f; /* Footer background */
+  --accent-color: #2f80ed; /* Links, accents */
+  --link-hover-color: #1f69c9; /* Link hover */
+  --footer-link-hover-color: #c1c1c1; /* Link hover in footer */
+}
+
 .page {
   /* Add page class properties here */
   min-width: 1100px;
@@ -49,6 +59,10 @@
   font-weight: bold;
 }
 
+.nav__link:hover {
+  color: #1f69c9;
+}
+
 .header__title {
   max-width: 601px;
   font-size: 76px;
@@ -85,6 +99,10 @@
 .header__link {
   color: #2f80ed;
   text-decoration: none;
+}
+
+.header__link:hover {
+  color: #1f69c9;
 }
 
 .header__address {
@@ -239,6 +257,7 @@
 
 .staff {
   padding: 100px 0 140px;
+  background-image: url("/images/staff_picks_background.jpg");
 }
 
 .staff__title {
@@ -246,6 +265,7 @@
   font-size: 44px;
   line-height: 52px;
   margin: 0 0 24px;
+  color: var(--contrast-bg-color);
 }
 
 .staff__subtitle {
@@ -254,11 +274,13 @@
   line-height: 30px;
   font-weight: 400;
   margin: 0;
+  color: var(--contrast-bg-color);
+  margin-bottom: 68px;
 }
 
 /* Add the CSS rule for your new class here. Make sure to place it before .card: parents should precede their children */
 .staff__cards {
-  margin: 68px auto 0;
+  margin: auto;
   text-align: center;
   margin-top: auto;
   display: flex;
@@ -328,13 +350,17 @@
   list-style-type: none;
   padding: 0;
   margin: 100px 0 0;
-  /* Add styles */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
 
 .step {
   /* Add styles */
+  width: 220px;
 }
-
 .step__title {
   margin: 0;
   font-size: 20px;
@@ -359,6 +385,8 @@
   overflow: hidden;
   position: relative;
   box-sizing: border-box;
+  display: flex;
+  gap: 120px;
 }
 
 .about__title {
@@ -367,6 +395,10 @@
   line-height: 30px;
   font-weight: 500;
   z-index: 1;
+
+  max-width: 154px;
+
+  color: #fff;
 }
 
 .about__content {
@@ -374,6 +406,9 @@
   line-height: 30px;
   font-weight: 400;
   max-width: 660px;
+  z-index: 1;
+
+  gap: 120px;
 }
 
 .about__circle {
@@ -381,22 +416,40 @@
   width: 495px;
   height: 495px;
   border-radius: 50%;
+  position: absolute;
+  top: -121px;
+  left: -91px;
 }
 
+.about__paragraph {
+  margin: 0 0 32px;
+}
+
+.about__paragraph:last-child {
+  margin-bottom: 0%;
+}
 .footer {
   box-sizing: border-box;
+  background-color: var(--footer-bg-color);
+  color: #fff;
+  padding: 60px 102px 60px 80px;
 }
 
 .footer__columns {
+  display: flex;
 }
 
 .footer__column_content_hours {
+  margin-left: auto;
 }
 
 .footer__column_content_social {
+  margin-left: 50px;
 }
 
 .footer__logo {
+  height: 57px;
+  width: 80px;
 }
 
 .footer__list {
@@ -407,9 +460,12 @@
 }
 
 .footer__list-item {
+  margin: 0 0 16px;
 }
 
 .footer__column-heading {
+  margin: 0 0 20px;
+  font-size: 16px;
 }
 
 .footer__column-link {
@@ -423,4 +479,5 @@
 }
 
 .footer__copyright {
+  margin: 108px 0 0;
 }
